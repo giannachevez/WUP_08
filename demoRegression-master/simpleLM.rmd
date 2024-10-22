@@ -47,3 +47,23 @@ Best to worst
 2. Headlen       ARsard: 0.69        RST: 67.81
 
 The Neck model has a higher ARsard (0.87) and a lower RST (43.91), indicating better performance and lower error. The Head length model has a lower ARsard (0.69) and a higher RST (67.81), showing weaker performance and greater error.
+
+
+## Model WEIGHT ~ HEADWTH  this is an example  
+
+```{r}
+headwthmodel <- lm(WEIGHT~HEADWTH,data=bears)
+plot(WEIGHT~HEADWTH,data=bears)
+abline(headwthmodel)
+summary.lm(headwthmodel)
+```
+
+Best to worst 
+
+1. Neck                ARsard: 0.87        RST: 43.9
+
+2. Head length         ARsard: 0.69        RST: 67.81
+
+3. Head width          ARsard: 0.60        RST: 76.41
+
+The Neck model ranks highest with the best performance: ARsard of 0.87 and the lowest RST of 43.91. The Head length model is in the middle, with a lower ARsard of 0.69 and a higher RST of 67.81. The Head width model ranks worst, having the lowest ARsard of 0.60 and the highest RST of 76.41, indicating the weakest performance and highest error.
