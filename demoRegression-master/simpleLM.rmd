@@ -30,3 +30,20 @@ summary.lm(simp)
 
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+
+
+## Model WEIGHT ~ HEADLEN  this is an example  
+
+```{r}
+headlenmodel <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(headlenmodel)
+summary.lm(headlenmodel)
+```
+
+Best to worst 
+
+1. Neck          ARsard: 0.87        RST: 43.91
+2. Headlen       ARsard: 0.69        RST: 67.81
+
+The Neck model has a higher ARsard (0.87) and a lower RST (43.91), indicating better performance and lower error. The Head length model has a lower ARsard (0.69) and a higher RST (67.81), showing weaker performance and greater error.
