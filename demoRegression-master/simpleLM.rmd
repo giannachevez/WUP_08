@@ -112,3 +112,29 @@ Best to worst
 5. Age                 ARsard: 0.55        RST: 81.47
 
 Neck is still the best-performing model with the highest ARsard (0.87) and the lowest RST (43.91). Length comes in second, with a decent ARsard (0.74) and moderate RST (61.83). Head length ranks third with a lower ARsard (0.69) and a higher RST (67.81). Head width ranks fourth, with a further drop in ARsard (0.60) and an RST of 76.41. Age ranks worst, with the lowest ARsard (0.55) and the highest RST (81.47), indicating the weakest performance and largest error.
+
+
+## Model WEIGHT ~ CHEST  this is an example 
+
+```{r}
+chestmodel <- lm(WEIGHT~CHEST,data=bears)
+plot(WEIGHT~CHEST,data=bears)
+abline(chestmodel)
+summary.lm(chestmodel)
+```
+
+Best to worst                
+
+1. Chest                ARsard: 0.92        RST: 33.08
+
+2. Neck                 ARsard: 0.87        RST: 43.9
+
+3. Length               ARsqrd: 0.74        RST: 61.83
+
+4. Head length          ARsard: 0.69        RST: 67.81
+
+5. Head width           ARsard: 0.60        RST: 76.41
+
+6. Age                  ARsard: 0.55        RST: 81.47
+
+The Chest ranks as the best model, with a high Adjusted R Squared and a low Residual Standard Error. This is evident in the chest model graph, where most data points are close to the line. As we move down the rankings from best to worst, the plots increasingly deviate from the line. 
