@@ -89,3 +89,26 @@ Best to worst
 4. Head width          ARsard: 0.60        RST: 76.41
 
 The Neck model remains the best performer with the highest ARsard (0.87) and the lowest RST (43.91). Length is second, with a solid ARsard of 0.74 and moderate RST of 61.83. Head length ranks third, with a lower ARsard (0.69) and a higher RST (67.81). Head width ranks last, with the lowest ARsard (0.60) and the highest RST (76.41).
+
+## Model WEIGHT ~ AGE  this is an example 
+
+```{r}
+agemodel <- lm(WEIGHT~AGE,data=bears)
+plot(WEIGHT~AGE,data=bears)
+abline(agemodel)
+summary.lm(agemodel)
+```
+
+Best to worst 
+
+1. Neck                ARsard: 0.87        RST: 43.9
+
+2. Length              ARsqrd: 0.74        RST: 61.83
+
+3. Head length         ARsard: 0.69        RST: 67.81
+
+4. Head width          ARsard: 0.60        RST: 76.41
+
+5. Age                 ARsard: 0.55        RST: 81.47
+
+Neck is still the best-performing model with the highest ARsard (0.87) and the lowest RST (43.91). Length comes in second, with a decent ARsard (0.74) and moderate RST (61.83). Head length ranks third with a lower ARsard (0.69) and a higher RST (67.81). Head width ranks fourth, with a further drop in ARsard (0.60) and an RST of 76.41. Age ranks worst, with the lowest ARsard (0.55) and the highest RST (81.47), indicating the weakest performance and largest error.
