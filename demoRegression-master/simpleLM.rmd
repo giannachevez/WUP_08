@@ -138,3 +138,5 @@ Best to worst
 6. Age                  ARsard: 0.55        RST: 81.47
 
 The Chest ranks as the best model, with a high Adjusted R Squared and a low Residual Standard Error. This is evident in the chest model graph, where most data points are close to the line. As we move down the rankings from best to worst, the plots increasingly deviate from the line. 
+
+Conclusion: In conclusion, Chest is the most accurate and least error-prone model, while Age has the weakest performance and the largest error. Neck is a close second, and the other models (Length, Head length, Head width) fall in between, with progressively lower performance and higher error.
